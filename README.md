@@ -1,2 +1,1 @@
-# Verteilte_Systeme_Labor1
-TicTacToe Feld
+# VS_P2_TTT
