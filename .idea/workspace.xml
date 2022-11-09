@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acc4196c-3303-4652-ab35-3816afb83337" name="Changes" comment="Initial Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/java/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/java/MoveAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/MoveAnswer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/java/TTTFeld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TTTFeld.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -51,7 +53,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="liberica-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="MainServer" />
-      <module name="Verteilte_Systeme_Labor1" />
+      <module name="TicTacToe" />
       <option name="VM_PARAMETERS" value="-Djava.rmi.server.hostname=172.16.1.4 -Djava.rmi.server.codebase=file:/$OutputPath$ -Djava.rmi.server.useCodebaseOnly=false" />
       <method v="2">
         <option name="Make" enabled="true" />
