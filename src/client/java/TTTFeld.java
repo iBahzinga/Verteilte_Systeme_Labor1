@@ -1,5 +1,3 @@
-import javafx.scene.control.skin.CellSkinBase;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,63 +24,79 @@ public class TTTFeld {
     private JTextField clientID;
     private JTextField gameIDVal;
 
-    public TTTFeld() throws RemoteException {
-        Start.addActionListener(new ActionListener() {
+    /**
+     * Tic tac toe field
+     *
+     * @throws RemoteException
+     */
+    public TTTFeld() throws RemoteException
+    {
+        Start.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
+            public void actionPerformed(ActionEvent e)
+            {
+                try
+                {
                     svr.Start();
-                } catch (RemoteException ex) {
+                }
+                catch (RemoteException ex)
+                {
                     throw new RuntimeException(ex);
                 }
-                serverStatLabel.setText("Server Started");
-                /*
-                try {
-                   connectAndStart("127.0.0.1");
-
-                } catch (RemoteException ex) {
-                    throw new RuntimeException(ex);
-                } catch (NotBoundException ex) {
-                    throw new RuntimeException(ex);
-                }
-                */
+                serverStatLabel.setText("Server started");
             }
         });
-        connectButton.addActionListener(new ActionListener() {
+        connectButton.addActionListener(new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 String host = ipBox.getText();
-                try {
+                try
+                {
                     connectAndStart(host);
-                } catch (RemoteException ex) {
+                }
+                catch (RemoteException ex)
+                {
                     throw new RuntimeException(ex);
-                } catch (NotBoundException ex) {
+                }
+                catch (NotBoundException ex)
+                {
                     throw new RuntimeException(ex);
                 }
             }
         });
-        ActionListener listener = new ActionListener() {
+        ActionListener listener = new ActionListener()
+        {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                for (int x = 0; x < field.length; x++) {
-                    for (int y = 0; y < field[x].length; y++) {
-                        if(field[x][y] == e.getSource()){
+            public void actionPerformed(ActionEvent e)
+            {
+                for (int x = 0; x < field.length; x++)
+                {
+                    for (int y = 0; y < field[x].length; y++)
+                    {
+                        if(field[x][y] == e.getSource())
+                        {
                             statusLabel.setText("Please wait");
                             int finalX = x;
                             int finalY = y;
                             clt.addMove(x,y);
                             updateField(clt.getMoves());
-                            SwingUtilities.invokeLater(() -> {
+                            SwingUtilities.invokeLater(() ->
+                            {
                                 String status = null;
-                                try {
+                                try
+                                {
                                     status = clt.makeMove(finalX, finalY);
-                                } catch (RemoteException ex) {
+                                }
+                                catch (RemoteException ex)
+                                {
                                     throw new RuntimeException(ex);
                                 }
                                 statusLabel.setText(status);
                                 updateField(clt.getMoves());
                             });
-
                         }
                     }
                 }
@@ -99,46 +113,76 @@ public class TTTFeld {
         field22.addActionListener(listener);
     }
 
-    private void connectAndStart(String hostname) throws NotBoundException, RemoteException {
-        SwingUtilities.invokeLater(() -> {
-            statusLabel.setText("Connecting...");
-            try {
+    /**
+     * Connect to the server and start the game if two player exist
+     * @param hostname hostname of the client
+     * @throws NotBoundException
+     * @throws RemoteException
+     */
+    private void connectAndStart(String hostname) throws NotBoundException, RemoteException
+    {
+        SwingUtilities.invokeLater(() ->
+        {
+            setStatusLabel(Labels.labelConnecting());
+            try
+            {
                 clt.connect(hostname);
-            } catch (RemoteException e) {
-                throw new RuntimeException(e);
-            } catch (NotBoundException e) {
+            }
+            catch (RemoteException e)
+            {
                 throw new RuntimeException(e);
             }
-            if( gameIDVal.getText().equals("")){
-                statusLabel.setText("Finding Game...");
-                SwingUtilities.invokeLater(() -> {
-                    try {
-                        if (clt.findGame(clientID.getText())) {
+            catch (NotBoundException e)
+            {
+                throw new RuntimeException(e);
+            }
+            if( gameIDVal.getText().equals(""))
+            {
+                setStatusLabel(Labels.labelFindGame());
+                SwingUtilities.invokeLater(() ->
+                {
+                    try
+                    {
+                        if (clt.findGame(clientID.getText()))
+                        {
                             gameIDVal.setEditable(false);
                             gameIDVal.setText(clt.getGameID());
                             updateField(clt.getMoves());
-                            statusLabel.setText("Your move");
-                        } else {
-                            statusLabel.setText("No Game found :(");
+                            setStatusLabel(Labels.labelYourMove());
                         }
-                    } catch (RemoteException e) {
+                        else
+                        {
+                            setStatusLabel(Labels.labelNoGameFound());
+                        }
+                    }
+                    catch (RemoteException e)
+                    {
                         throw new RuntimeException(e);
                     }
                 });
             }
-            else {
-                statusLabel.setText("ReJoining Game...");
-                SwingUtilities.invokeLater(() -> {
-                    try {
+            else
+            {
+
+                setStatusLabel(Labels.labelRejoin());
+                SwingUtilities.invokeLater(() ->
+                {
+                    try
+                    {
                         gameIDVal.setEditable(false);
-                        if (clt.resumeGame(gameIDVal.getText(), clientID.getText())) {
+                        if (clt.resumeGame(gameIDVal.getText(), clientID.getText()))
+                        {
                             updateField(clt.getMoves());
-                            statusLabel.setText("Your move");
-                        } else {
-                            statusLabel.setText("No Game found :(");
+                            setStatusLabel(Labels.labelYourMove());
+                        }
+                        else
+                        {
+                            setStatusLabel(Labels.labelNoGameFound());
                             gameIDVal.setEditable(true);
                         }
-                    } catch (RemoteException e) {
+                    }
+                    catch (RemoteException e)
+                    {
                         throw new RuntimeException(e);
                     }
                 });
@@ -147,7 +191,13 @@ public class TTTFeld {
 
         });
     }
-    public JPanel getPanel1() {
+
+    /**
+     * Method to get the panel and start the application
+     * @return
+     */
+    public JPanel getPanel1()
+    {
         return panel1;
     }
 
@@ -157,34 +207,70 @@ public class TTTFeld {
             {this.field20, this.field21, this.field22}
     };
 
-    private final Server svr = new Server(new TicTacToeAServiceImpl());
-    private final Client clt = new Client();
-
-    public void setField(int x, int y, String value){
+    /**
+     * get the coordinates and set the specific field in the toc tac toe field
+     * @param x coordinate x
+     * @param y coordinate y
+     * @param value player
+     */
+    public void setSpecificField(int x, int y, String value){
         field[x][y].setText(value);
     }
 
-    public void setField(Move move){
-        if (move.playerID == null) {
-            setField(move.x, move.y, nope());
-        } else {
-            setField(move.x, move.y, "" + move.playerID + "");
+    /**
+     * set a field in the toc tac toe field
+     * @param move Move with x and y coordinates
+     */
+    public void setField(Move move)
+    {
+        if (move.playerID == null)
+        {
+            setSpecificField(move.x, move.y, nope());
+        }
+        else
+        {
+            setSpecificField(move.x, move.y, "" + move.playerID + "");
         }
     }
 
+    /**
+     * Message in the tic tac toe fields, if the client is not connected to the server.
+     * @return Nope
+     */
     public String nope(){ return "Nope"; }
 
-    public void updateField(List<Move> moves){
-        for (JButton[] jButtons : field) {
-            for (JButton jButton : jButtons) {
+    /**
+     * Update a specific field
+     * @param moves
+     */
+    public void updateField(List<Move> moves)
+    {
+        for (JButton[] jButtons : field)
+        {
+            for (JButton jButton : jButtons)
+            {
                 jButton.setText(" ");
             }
         }
         moves.forEach(this::setField);
     }
 
+    /**
+     * Server with the logic
+     */
+    private final Server svr = new Server(new TicTacToeAServiceImpl());
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
+    /**
+     * Client that plays the game
+     */
+    private final Client clt = new Client();
+
+    /**
+     * Set the new label in the application to inform the user
+     * @param newLabel Text of the new label
+     */
+    private void setStatusLabel(String newLabel)
+    {
+        statusLabel.setText(newLabel);
     }
 }
