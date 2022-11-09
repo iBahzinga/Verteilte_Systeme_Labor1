@@ -1,8 +1,18 @@
 import javax.swing.*;
 import java.rmi.RemoteException;
 
-public class MainServer {
-    public static void main(String[] args) throws RemoteException {
+/**
+ * Main class to start the application
+ */
+public class MainServer
+{
+    /**
+     * Main method to start the application
+     * @param args no args needed
+     * @throws RemoteException can throw a remote exception
+     */
+    public static void main(String[] args) throws RemoteException
+    {
         JFrame frame = new JFrame("TicTacToe As A Service");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(700  ,700);

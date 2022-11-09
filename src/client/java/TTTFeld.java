@@ -5,7 +5,8 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.List;
 
-public class TTTFeld {
+public class TTTFeld
+{
     private JPanel panel1;
     private JButton field00;
     private JButton field20;

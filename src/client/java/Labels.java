@@ -1,7 +1,8 @@
 /**
  * Provide a String for the labels
  */
-public class Labels {
+public class Labels
+{
 
     /**
      * Label if Client try to connect to the server

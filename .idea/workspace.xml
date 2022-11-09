@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acc4196c-3303-4652-ab35-3816afb83337" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/client/java/Labels.java" afterDir="false" />
+    <list default="true" id="acc4196c-3303-4652-ab35-3816afb83337" name="Changes" comment="neue klasse hinzugefügt und code optimiert">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/GameHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/Labels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/Labels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/MainServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/MainServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/MoveAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/MoveAnswer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/java/TTTFeld.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TTTFeld.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/java/TTTFeld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TTTFeld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/TicTacToeAService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TicTacToeAService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/TicTacToeAServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TicTacToeAServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,16 +42,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/pki/Documents/Projects/VS/Labor1_A/Verteilte_Systeme_Labor1",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pki/Documents/Projects/VS/Labor1_A/Verteilte_Systeme_Labor1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -87,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666130774324</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="neue klasse hinzugefügt und code optimiert">
+      <created>1668006409079</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668006409079</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,7 +119,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="neue klasse hinzugefügt und code optimiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="neue klasse hinzugefügt und code optimiert" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
