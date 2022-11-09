@@ -18,7 +18,7 @@ public class TicTacToeAServiceImpl extends UnicastRemoteObject implements TicTac
 
 
     private String getFirstMoveStr(String name){
-        String[] answers = {"your turn", "wait for turn", "there is no opponent"};
+        String[] answers = {"your_move", "opponent_move", "no_opponent_found"};
         if(Objects.equals(name, "")){
             return answers[2];
         }
@@ -82,7 +82,7 @@ public class TicTacToeAServiceImpl extends UnicastRemoteObject implements TicTac
 
     @Override
     public String makeMove(int x, int y, String gameId) throws RemoteException {
-        System.out.println("Move");
+        System.out.println("Makeing Move");
         if (games.get(gameId) != null) {
             try {
                 synchronized (games.get(gameId)) {

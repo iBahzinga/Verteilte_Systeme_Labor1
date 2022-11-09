@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acc4196c-3303-4652-ab35-3816afb83337" name="Changes" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/java/TTTFeld.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TTTFeld.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/MoveAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/MoveAnswer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/java/TTTFeld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TTTFeld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/java/TicTacToeAServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TicTacToeAServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +36,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -51,11 +48,11 @@
   </component>
   <component name="RunManager">
     <configuration name="MainServer" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="liberica-17" />
+      <option name="ALTERNATIVE_JRE_PATH" value="liberica-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="MainServer" />
-      <module name="TicTacToe" />
-      <option name="VM_PARAMETERS" value="-Djava.rmi.server.hostname=172.16.1.7 -Djava.rmi.server.codebase=file:/$OutputPath$ -Djava.rmi.server.useCodebaseOnly=false" />
+      <module name="Verteilte_Systeme_Labor1" />
+      <option name="VM_PARAMETERS" value="-Djava.rmi.server.hostname=172.16.1.4 -Djava.rmi.server.codebase=file:/$OutputPath$ -Djava.rmi.server.useCodebaseOnly=false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,6 +98,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />

@@ -67,7 +67,7 @@ public class TTTFeld {
                 for (int x = 0; x < field.length; x++) {
                     for (int y = 0; y < field[x].length; y++) {
                         if(field[x][y] == e.getSource()){
-                            statusLabel.setText("Please wait");
+                            statusLabel.setText("Waiting for Opp. Move...");
                             int finalX = x;
                             int finalY = y;
                             clt.addMove(x,y);
@@ -165,26 +165,19 @@ public class TTTFeld {
     }
 
     public void setField(Move move){
-        if (move.playerID == null) {
-            setField(move.x, move.y, nope());
-        } else {
-            setField(move.x, move.y, "" + move.playerID + "");
-        }
+        setField(move.x, move.y, "[ " + move.playerID + " ]");
     }
-
-    public String nope(){ return "Nope"; }
 
     public void updateField(List<Move> moves){
         for (JButton[] jButtons : field) {
             for (JButton jButton : jButtons) {
-                jButton.setText(" ");
+                jButton.setText("[ ]");
             }
         }
         moves.forEach(this::setField);
     }
 
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
+
 }
+
