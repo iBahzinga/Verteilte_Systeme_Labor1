@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="acc4196c-3303-4652-ab35-3816afb83337" name="Changes" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/java/TTTFeld.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TTTFeld.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/java/TTTFeld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TTTFeld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/java/TicTacToeAServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/java/TicTacToeAServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/GameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/MainServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/MainServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/MoveAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/MoveAnswer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/TTTFeld.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/TTTFeld.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/TTTFeld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/TTTFeld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/TicTacToeAService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/TicTacToeAService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/java/TicTacToeAServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TicTacToeRemote/TicTacToeAServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +32,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -35,27 +48,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/TicTacToeRemote" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="MainServer" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="liberica-17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="MainServer" />
+    <configuration name="MainServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TicTacToeRemote.MainServer" />
       <module name="TicTacToe" />
-      <option name="VM_PARAMETERS" value="-Djava.rmi.server.hostname=172.16.1.7 -Djava.rmi.server.codebase=file:/$OutputPath$ -Djava.rmi.server.useCodebaseOnly=false" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TicTacToeRemote.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,6 +116,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />

@@ -1,4 +1,6 @@
- public class MoveAnswer{
+package TicTacToeRemote;
+
+public class MoveAnswer{
     public  enum MoveAnswerType {
         NO_EXIST(0),
         INVALID_MOVE(1),
@@ -55,30 +57,30 @@
         }
     }
 
-     MoveAnswer(String strAnswer, String opp){
-         answer = MoveAnswerType.getType(strAnswer);
-         if (answer.equals(MoveAnswerType.VALID)){
-             move = new Move(strAnswer);
-             move.playerID = opp;
-         }
-         else {
-             move = null;
-         }
-     }
+    MoveAnswer(String strAnswer, String opp){
+        answer = MoveAnswerType.getType(strAnswer);
+        if (answer.equals(MoveAnswerType.VALID)){
+            move = new Move(strAnswer);
+            move.playerID = opp;
+        }
+        else {
+            move = null;
+        }
+    }
 
     public boolean is(MoveAnswerType type){
         return answer == type;
     }
 
-     @Override
-     public String toString() {
+    @Override
+    public String toString() {
         if (move != null){
             return move.toString();
         }
         return answer.toString();
-     }
+    }
 
-     public Move getMove() {
-         return move;
-     }
- }
+    public Move getMove() {
+        return move;
+    }
+}

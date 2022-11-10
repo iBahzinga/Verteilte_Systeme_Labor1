@@ -1,4 +1,4 @@
-import javafx.scene.control.skin.CellSkinBase;
+package TicTacToeRemote;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -36,16 +36,6 @@ public class TTTFeld {
                     throw new RuntimeException(ex);
                 }
                 serverStatLabel.setText("Server Started");
-                /*
-                try {
-                   connectAndStart("127.0.0.1");
-
-                } catch (RemoteException ex) {
-                    throw new RuntimeException(ex);
-                } catch (NotBoundException ex) {
-                    throw new RuntimeException(ex);
-                }
-                */
             }
         });
         connectButton.addActionListener(new ActionListener() {
@@ -67,7 +57,7 @@ public class TTTFeld {
                 for (int x = 0; x < field.length; x++) {
                     for (int y = 0; y < field[x].length; y++) {
                         if(field[x][y] == e.getSource()){
-                            statusLabel.setText("Please wait");
+                            statusLabel.setText("Waiting for Opponent");
                             int finalX = x;
                             int finalY = y;
                             clt.addMove(x,y);
@@ -119,7 +109,7 @@ public class TTTFeld {
                             updateField(clt.getMoves());
                             statusLabel.setText("Your move");
                         } else {
-                            statusLabel.setText("No Game found :(");
+                            statusLabel.setText("No Game found");
                         }
                     } catch (RemoteException e) {
                         throw new RuntimeException(e);
@@ -135,7 +125,7 @@ public class TTTFeld {
                             updateField(clt.getMoves());
                             statusLabel.setText("Your move");
                         } else {
-                            statusLabel.setText("No Game found :(");
+                            statusLabel.setText("No Game found");
                             gameIDVal.setEditable(true);
                         }
                     } catch (RemoteException e) {
@@ -165,14 +155,8 @@ public class TTTFeld {
     }
 
     public void setField(Move move){
-        if (move.playerID == null) {
-            setField(move.x, move.y, nope());
-        } else {
-            setField(move.x, move.y, "" + move.playerID + "");
-        }
+        setField(move.x, move.y, " " + move.playerID + " ");
     }
-
-    public String nope(){ return "Nope"; }
 
     public void updateField(List<Move> moves){
         for (JButton[] jButtons : field) {
@@ -182,9 +166,5 @@ public class TTTFeld {
         }
         moves.forEach(this::setField);
     }
-
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }
+

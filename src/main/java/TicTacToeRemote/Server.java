@@ -1,4 +1,5 @@
-import java.rmi.NotBoundException;
+package TicTacToeRemote;
+
 import java.rmi.RemoteException;
 
 public class Server {
