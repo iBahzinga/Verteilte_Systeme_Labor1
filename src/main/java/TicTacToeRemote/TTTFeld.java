@@ -1,4 +1,4 @@
-//import javafx.scene.control.skin.CellSkinBase;
+package TicTacToeRemote;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -1,9 +1,10 @@
+package TicTacToeRemote;
+
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class TicTacToeAServiceImpl extends UnicastRemoteObject implements TicTacToeAService{
 
@@ -86,7 +87,20 @@ public class TicTacToeAServiceImpl extends UnicastRemoteObject implements TicTac
         if (games.get(gameId) != null) {
             try {
                 synchronized (games.get(gameId)) {
-                    return games.get(gameId).makeMove(x, y).toString();
+                    boolean dot = false;
+                    String subStr = games.get(gameId).makeMove(x, y).toString();
+                    if (subStr.indexOf(':') > 0) {
+                        dot = true;
+                    }
+                     if(dot){
+                         System.err.println(subStr + "    before");
+
+                         subStr = subStr.substring(subStr.indexOf(':') + 2);
+
+                         System.err.println(subStr + "    after");
+                     }
+
+                    return subStr;
                 }
             }
             catch (Exception e){

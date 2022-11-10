@@ -1,3 +1,5 @@
+package TicTacToeRemote;
+
 public class MoveAnswer{
     public  enum MoveAnswerType {
         NO_EXIST(0),

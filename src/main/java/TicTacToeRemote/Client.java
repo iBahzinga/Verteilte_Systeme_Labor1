@@ -1,4 +1,5 @@
-import java.awt.event.MouseEvent;
+package TicTacToeRemote;
+
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
